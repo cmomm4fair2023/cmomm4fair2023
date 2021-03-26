@@ -78,6 +78,19 @@ ul li:hover a {
 	margin-bottom: 0px;
 	margin-left: 0px;
 }
+
+a:link, a:visited {
+  background-color: none;
+  color: blue;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: pink;
+}
+
 /* Title Section */
 .titleBox {
 	background-color: #008092;
