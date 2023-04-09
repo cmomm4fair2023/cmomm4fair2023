@@ -19,57 +19,102 @@ body {
 	background-color: #FFFFFF;
 }
 /* Navigation */
+.header-banner {
+  width: 12%;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  color: white;
+  text-align: center; /* Add text-align property with value "center" */
+  line-height: 100%;
+  transform: translateX(10px);
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.8px;
+}
+
+.header-banner > h2 {
+	white-space: nowrap; /* Add white-space property with value "nowrap" to prevent text from wrapping to the next line */
+  }
+
+
 header {
 	width: 100%;
 	height: 5%;
 	background-color: #52bad5;
 	border-bottom: 1px solid #2C9AB7;
+	align-items: center; /* Add */
 }
+
 .subDeadline {
-	color: white ;
+	color: white;
 	background-color: #00434D;
 	font-weight: bold;
 	width: 300px;
 	margin-top: 15px;
 	margin-left: 25px;
 }
+
 .logo {
 	color: #fff;
 	font-weight: bold;
-	text-align: undefined;
+	text-align: center;
 	width: 10%;
 	float: left;
 	margin-top: 15px;
 	margin-left: 25px;
 	letter-spacing: 4px;
 }
+
 nav {
 	float: right;
-	width: 50%;
+	width: 75%;
 	text-align: right;
 	margin-right: 25px;
 }
+
 header nav ul {
 	list-style: none;
 	float: right;
 }
+
 nav ul li {
 	float: left;
 	color: #FFFFFF;
-	font-size: 14px;
+	font-size: 15px;
 	text-align: left;
 	margin-right: 25px;
 	letter-spacing: 2px;
 	font-weight: bold;
+	position: relative;
 	transition: all 0.3s linear;
 }
+
 ul li a {
 	color: #FFFFFF;
 	text-decoration: none;
+	position: relative; /* Added */
+	z-index: 1; /* Added */
 }
+
 ul li:hover a {
 	color: #2C9AB7;
 }
+
+ul li::before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 2px;
+	background-color: white;
+	top: -5px;
+	left: 0;
+	transition: width 0.3s ease-in-out;
+}
+
+ul li:hover::before {
+	width: 100%;
+}
+
 .workshopTitle {
 	color: #FFFFFF;
 	text-align: center;
@@ -78,18 +123,37 @@ ul li:hover a {
 	margin-bottom: 0px;
 	margin-left: 0px;
 }
-
-a:link, a:visited {
-  background-color: none;
-  color: blue;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+nav ul li a:link,
+nav ul li a:visited {
+	background-color: none;
+	color: white; /* Updated */
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	z-index: 2;
 }
 
-a:hover, a:active {
-  background-color: pink;
+nav ul li a:hover,
+nav ul li a:active {
+	background-color: none;
 }
+
+/* General Links */
+a:link,
+a:visited {
+	background-color: none;
+	color: blue;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	z-index: 2; /* Added */
+}
+
+a:not(nav a):hover,
+a:not(nav a):active {
+  background-color: #90EE90;
+}
+
 
 /* Title Section */
 .titleBox {

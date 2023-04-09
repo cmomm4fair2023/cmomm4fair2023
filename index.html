@@ -28,19 +28,20 @@
     </nav>
   </header> -->
 
-        <!-- <header>
-            <div id = 'test'>
-                <nav>
-                    <ul>
-                        <li><a href="#cmomm4fair">Cmomm4fair Content</a></li>
-                        <li><a href="#submission-guidelines">Submission Guidelines</a></li>
-                        <li><a href="#important-dates">Important Dates</a></li>
-                        <li><a href="#organization">Organization</a></li>
-                        <li><a href="#previous-editions">Previous Editions</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header> -->
+  <header>
+    <div>
+        <div class="header-banner"> <h2> CMOMM4FAIR 2023</h1></div>
+        <nav class="navbar"  id="myNavbar">
+            <ul>
+                <!-- <li><a href="#cmomm4fair" class="navbar-link">Content</a></li> -->
+                <li><a href="#important-dates" class="navbar-link">Important Dates</a></li>
+                <li><a href="#subGuidelines" class="navbar-link">Submission Guidelines</a></li>
+                <li><a href="#organization" class="navbar-link">Organization</a></li>
+                <li><a href="#previousEditions" class="navbar-link">Previous Editions</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
         <!-- Title Section -->
         <section class="titleBox" id="titleBox">
@@ -138,7 +139,7 @@
 
 
 
-        <section class="importantDates">
+        <section class="importantDates" id = "important-dates">
             <h2>Important dates</h2>
             <ul>
                 <li>Workshop paper submission: August 02, 2023</li>
@@ -148,7 +149,7 @@
             </ul>
 
         </section>
-        <section class="subGuidelines">
+        <section class="subGuidelines" id = "subGuidelines">
             <h2>Submission guidelines</h2>
 
             <h3>Guidelines for full papers</h2>
@@ -165,7 +166,7 @@
             
             
         </section>
-        <section class="workshopOrganizers">
+        <section class="workshopOrganizers" id = "organization">
             <h2>Workshop Organizers</h2>
             <ul>
                 <li>João Moreira (University of Twente, the Netherlands)</li>
@@ -179,7 +180,7 @@
                 <li>João Moreira (University of Twente, the Netherlands)</li>
                 <li>Luiz Olavo Bonino (GO FAIR, University of Twente, LUMC, the Netherlands)</li>
                 <li>Pedro Paulo F. Barcelos (Free University of Bozen-Bolzano)</li>
-                <li>Robert Pergl (Technical University of Prague, Czech Republic) - TBC</li>
+                <li>Robert Pergl (Technical University of Prague, Czech Republic)</li>
                 <li>Tobias Kuhn (VU Amsterdam / UCDS, Netherlands)</li>
                 <li>Nicola Guarino (Laboratory for Applied Ontology, Italy)</li>
                 <li>Giancarlo Guizzardi (Free University of Bozen-Bolzano, Italy)</li>
@@ -192,7 +193,7 @@
 
         </section>
 
-        <section class="importantDates">
+        <section class="importantDates" id = 'previousEditions'>
             <h2>Previous editions</h2>
             <ul>
                 <li><a href="https://cmomm4fair.github.io/index_2020_2nd_edition.html">2nd edition (2020)</a></li>
@@ -205,6 +206,20 @@
 
     </div>
     <!-- Main Container Ends -->
+    <script>
+        function hideNavbarOnMobile() {
+          var navbar = document.getElementById("myNavbar"); 
+          var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+          if (screenWidth <= 1170) { // Adjust the screen width threshold to desired breakpoint
+            navbar.style.display = "none";
+          } else {
+            navbar.style.display = "block";
+          }
+        }
+    
+        window.addEventListener("load", hideNavbarOnMobile); // Call the function on page load
+        window.addEventListener("resize", hideNavbarOnMobile); // Call the function on window resize
+      </script>
 </body>
 
 </html>
