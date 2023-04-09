@@ -588,42 +588,6 @@ nav ul li {
 }
 }
 
-/* CSS for the navbar */
-header {
-    background-color: #333;
-    height: 60px;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-#test {
-    line-height: 70px;
-    font-size: 15px;
-    font-weight: 400;
-    list-style: none;
-    font-family: Roboto,sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    cursor: pointer;
-    text-decoration: none;
-}
+html {
+	scroll-behavior: smooth;
+  }
